@@ -61,6 +61,28 @@ namespace ProyectoBiblioteca
             try 
             {
                 ObtenerLibroSeleccionado();
+                string consulta;
+                string mensaje;
+
+                if (_libroSeleccionado == null) // Modo Agregar
+                {
+                    consulta = $"INSERT INTO Libros (Titulo, Autor, AnioPublicacion) VALUES ('{titulo}', '{autor}', {anio})";
+                    mensaje = "Libro agregado exitosamente.";
+                }
+                else // Modo Actualizar
+                {
+                    consulta = $"UPDATE Libros SET Titulo = '{titulo}', Autor = '{autor}', AnioPublicacion = {anio} WHERE Id = {_libroSeleccionado.Id}";
+                    mensaje = "Libro actualizado exitosamente.";
+                }
+
+                int filasAfectadas = _asistenteSql.EjecutarNoConsulta(consulta);
+
+                if (filasAfectadas > 0)
+                {
+                    MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarLibros();
+                    LimpiarCampos();
+                }
 
             }
             catch (Exception ex)
@@ -71,7 +93,28 @@ namespace ProyectoBiblioteca
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (DgvLibros.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Seleccione un libro para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+                int id = Convert.ToInt32(DgvLibros.SelectedRows[0].Cells["Id"].Value);
+                string consulta = $"DELETE FROM Libros WHERE Id = {id}";
+                int filasAfectadas = _asistenteSql.EjecutarNoConsulta(consulta);
+
+                if (filasAfectadas > 0)
+                {
+                    MessageBox.Show("Libro eliminado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarLibros();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
