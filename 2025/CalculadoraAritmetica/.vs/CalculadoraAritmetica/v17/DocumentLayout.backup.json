@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Urrutia\\OneDrive - Universidad Modular Abierta\\Documents\\Workspaces\\uma\\WinForm\\PRG_II\\2025\\Unidad_1\\CalculadoraAritmetica\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{39B775EC-7D30-4E21-AE15-F11C4E879B18}|CalculadoraAritmetica\\CalculadoraAritmetica.csproj|c:\\users\\urrutia\\onedrive - universidad modular abierta\\documents\\workspaces\\uma\\winform\\prg_ii\\2025\\unidad_1\\calculadoraaritmetica\\calculadoraaritmetica\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39B775EC-7D30-4E21-AE15-F11C4E879B18}|CalculadoraAritmetica\\CalculadoraAritmetica.csproj|solutionrelative:calculadoraaritmetica\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39B775EC-7D30-4E21-AE15-F11C4E879B18}|CalculadoraAritmetica\\CalculadoraAritmetica.csproj|C:\\Users\\Urrutia\\OneDrive - Universidad Modular Abierta\\Documents\\Workspaces\\uma\\WinForm\\PRG_II\\2025\\Unidad_1\\CalculadoraAritmetica\\calculadoraaritmetica\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{39B775EC-7D30-4E21-AE15-F11C4E879B18}|CalculadoraAritmetica\\CalculadoraAritmetica.csproj|solutionrelative:calculadoraaritmetica\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmCalculadora.cs",
+              "DocumentMoniker": "C:\\Users\\Urrutia\\OneDrive - Universidad Modular Abierta\\Documents\\Workspaces\\uma\\WinForm\\PRG_II\\2025\\Unidad_1\\CalculadoraAritmetica\\CalculadoraAritmetica\\FrmCalculadora.cs",
+              "RelativeDocumentMoniker": "CalculadoraAritmetica\\FrmCalculadora.cs",
+              "ToolTip": "C:\\Users\\Urrutia\\OneDrive - Universidad Modular Abierta\\Documents\\Workspaces\\uma\\WinForm\\PRG_II\\2025\\Unidad_1\\CalculadoraAritmetica\\CalculadoraAritmetica\\FrmCalculadora.cs",
+              "RelativeToolTip": "CalculadoraAritmetica\\FrmCalculadora.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAcwJIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T05:00:00.177Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmCalculadora.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Urrutia\\OneDrive - Universidad Modular Abierta\\Documents\\Workspaces\\uma\\WinForm\\PRG_II\\2025\\Unidad_1\\CalculadoraAritmetica\\CalculadoraAritmetica\\FrmCalculadora.cs",
+              "RelativeDocumentMoniker": "CalculadoraAritmetica\\FrmCalculadora.cs",
+              "ToolTip": "C:\\Users\\Urrutia\\OneDrive - Universidad Modular Abierta\\Documents\\Workspaces\\uma\\WinForm\\PRG_II\\2025\\Unidad_1\\CalculadoraAritmetica\\CalculadoraAritmetica\\FrmCalculadora.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CalculadoraAritmetica\\FrmCalculadora.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T03:51:56.321Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

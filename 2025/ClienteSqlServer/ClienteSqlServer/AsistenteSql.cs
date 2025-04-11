@@ -24,7 +24,7 @@ namespace ClienteSqlServer
         /// <param name="consulta">Consulta SELECT de SQL a ejecutar</param>
         /// <returns>DataTable</returns>
         /// <exception cref="Exception"></exception>
-        public DataTable EjecutarConsulta(string consulta)
+        public DataTable EjecutarConsulta(string consulta, SqlParameter[] parametros = null)
         {
             DataTable tablaDeDatos = new DataTable();
 
@@ -35,6 +35,9 @@ namespace ClienteSqlServer
                     conexion.Open();
                     using (SqlCommand comando = new SqlCommand(consulta, conexion))
                     {
+                        if (parametros != null)
+                            comando.Parameters.AddRange(parametros);
+
                         using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
                         {
                             adaptador.Fill(tablaDeDatos);
@@ -58,7 +61,7 @@ namespace ClienteSqlServer
         /// <param name="consulta">Consulta SQL a ejecutar</param>
         /// <returns>Lista de objetos especificados</returns>
         /// <exception cref="Exception"></exception>
-        public List<T> EjecutarConsulta<T>(string consulta) where T : new()
+        public List<T> EjecutarConsulta<T>(string consulta, SqlParameter[] parametros = null) where T : new()
         {
             List<T> registros = new List<T>();
 
@@ -69,6 +72,9 @@ namespace ClienteSqlServer
                     conexion.Open();
                     using (SqlCommand comando = new SqlCommand(consulta, conexion))
                     {
+                        if (parametros != null)
+                            comando.Parameters.AddRange(parametros);
+
                         using (SqlDataReader lector = comando.ExecuteReader())
                         {
                             while (lector.Read())
@@ -119,7 +125,7 @@ namespace ClienteSqlServer
         /// <param name="consulta">Consulta SQL a Ejecutar</param>
         /// <returns>Número de filas afectadas</returns>
         /// <exception cref="Exception"></exception>
-        public int EjecutarNoConsulta(string consulta)
+        public int EjecutarNoConsulta(string consulta, SqlParameter[] parametros = null)
         {
             int filasAfectadas = 0;
 
@@ -130,6 +136,9 @@ namespace ClienteSqlServer
                     conexion.Open();
                     using (SqlCommand comando = new SqlCommand(consulta, conexion))
                     {
+                        if (parametros != null)
+                            comando.Parameters.AddRange(parametros);
+
                         filasAfectadas = comando.ExecuteNonQuery();
                     }
                 }
